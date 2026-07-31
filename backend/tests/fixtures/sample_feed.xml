@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sample</title>
+    <item>
+      <title>Bitcoin surges past 70k</title>
+      <link>https://example.com/btc-70k</link>
+      <description>BTC breaks resistance amid ETF inflows</description>
+      <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Fed holds rates steady</title>
+      <link>https://example.com/fed-hold</link>
+      <description>FOMC keeps rates unchanged, watches CPI</description>
+      <pubDate>Wed, 01 Jul 2026 09:30:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

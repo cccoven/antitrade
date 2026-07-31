@@ -1,0 +1,375 @@
+[div] Navigation
+[span] Market Overview
+[span] AI Assistant
+[span] Automations
+[span] Radar
+[span] Trading Tools
+[span] Journal
+[span] Strategies
+[span] Portfolio
+[span] Backtest
+[span] Login
+[span] Settings
+[div] Market Overview
+[div] Updated at 2:58:01 PM · Auto-refreshes every 30s
+[span] 28,460.25
+[span] -0.05%
+[span] 7,494
+[span] -0.02%
+[span] SPY
+[span] 741.69
+[span] +1.68%
+[span] QQQ
+[span] 683.55
+[span] +3.30%
+[span] IWM
+[span] 292.59
+[span] +1.39%
+[span] DIA
+[span] 521.51
+[span] +1.18%
+[span] TLT
+[span] 82.8
+[span] -0.06%
+[span] HYG
+[span] 79.47
+[span] +0.29%
+[span] USO
+[span] 127.48
+[span] -1.42%
+[span] GLD
+[span] 377.16
+[span] +1.64%
+[span] SLV
+[span] 53.5
+[span] +3.34%
+[span] 4,139.3
+[span] +0.03%
+[span] XAU/USD
+[span] 4,077.83
+[span] -0.03%
+[span] EUR/USD
+[span] 1.1522
+[span] +0.48%
+[span] GBP/USD
+[span] 1.3455
+[span] +0.66%
+[span] USD/JPY
+[span] 160.226
+[span] -1.88%
+[span] AUD/USD
+[span] 0.7037
+[span] +1.11%
+[span] BTC/USD
+[span] 64,200.7617
+[span] +0.46%
+[span] ETH/USD
+[span] 1,901.87
+[span] -0.35%
+[span] SOL/USD
+[span] 74.06
+[span] +0.63%
+[span] 28,460.25
+[span] -0.05%
+[span] 7,494
+[span] -0.02%
+[span] SPY
+[span] 741.69
+[span] +1.68%
+[span] QQQ
+[span] 683.55
+[span] +3.30%
+[span] IWM
+[span] 292.59
+[span] +1.39%
+[span] DIA
+[span] 521.51
+[span] +1.18%
+[span] TLT
+[span] 82.8
+[span] -0.06%
+[span] HYG
+[span] 79.47
+[span] +0.29%
+[span] USO
+[span] 127.48
+[span] -1.42%
+[span] GLD
+[span] 377.16
+[span] +1.64%
+[span] SLV
+[span] 53.5
+[span] +3.34%
+[span] 4,139.3
+[span] +0.03%
+[span] XAU/USD
+[span] 4,077.83
+[span] -0.03%
+[span] EUR/USD
+[span] 1.1522
+[span] +0.48%
+[span] GBP/USD
+[span] 1.3455
+[span] +0.66%
+[span] USD/JPY
+[span] 160.226
+[span] -1.88%
+[span] AUD/USD
+[span] 0.7037
+[span] +1.11%
+[span] BTC/USD
+[span] 64,200.7617
+[span] +0.46%
+[span] ETH/USD
+[span] 1,901.87
+[span] -0.35%
+[span] SOL/USD
+[span] 74.06
+[span] +0.63%
+[span] GATEWAY
+[span] Data online
+[div] Cross-asset markets
+[div] 2:57:00 PM
+[button] All
+[button] Indices
+[button] Rates
+[button] Energy
+[button] Metals
+[button] Crypto
+[div] Nasdaq Futures
+[span] 28,460.25
+[span] -0.05%
+[span] -15.5
+[span] CME_MINI
+[span] 28,460
+[span] 28,473.25
+[div] S&P Futures
+[span] 7,494
+[span] -0.02%
+[span] -1.5
+[span] CME_MINI
+[span] 7,493.25
+[span] 7,495.75
+[div] S&P 500
+[div] SPY
+[span] 741.69
+[span] +1.68%
+[span] +12.23
+[span] 734.59
+[span] 742.45
+[div] Nasdaq 100
+[div] QQQ
+[span] 683.55
+[span] +3.30%
+[span] +21.82
+[span] 673.3
+[span] 685.12
+[div] Russell 2000
+[div] IWM
+[span] 292.59
+[span] +1.39%
+[span] +4.02
+[span] 288.96
+[span] 292.84
+[div] Dow Jones
+[div] DIA
+[span] 521.51
+[span] +1.18%
+[span] +6.1
+[span] 515.87
+[span] 521.98
+[div] US 20Y Treasury
+[div] TLT
+[span] 82.8
+[span] -0.06%
+[span] -0.05
+[span] 82.52
+[span] 82.9
+[div] High Yield Bonds
+[div] HYG
+[span] 79.47
+[span] +0.29%
+[span] +0.23
+[span] 79.33
+[span] 79.5
+[div] WTI Oil ETF
+[div] USO
+[span] 127.48
+[span] -1.42%
+[span] -1.83
+[span] 126.91
+[span] 129.21
+[div] Gold ETF
+[div] GLD
+[span] 377.16
+[span] +1.64%
+[span] +6.08
+[span] 373.76
+[span] 377.86
+[div] Silver ETF
+[div] SLV
+[span] 53.5
+[span] +3.34%
+[span] +1.73
+[span] 52.21
+[span] 53.55
+[div] Gold Futures
+[span] 4,139.3
+[span] +0.03%
+[span] +1.2
+[span] COMEX
+[span] 4,138.4
+[span] 4,139.4
+[div] Gold Spot
+[div] XAU/USD
+[span] 4,077.83
+[span] -0.03%
+[span] -1.075
+[span] OANDA
+[span] 4,077.83
+[span] 4,078.91
+[div] EUR/USD
+[div] EUR/USD
+[span] 1.1522
+[span] +0.48%
+[span] +0.0055
+[span] 1.1509
+[span] 1.1534
+[div] GBP/USD
+[div] GBP/USD
+[span] 1.3455
+[span] +0.66%
+[span] +0.0088
+[span] 1.3441
+[span] 1.347
+[div] USD/JPY
+[div] USD/JPY
+[span] 160.226
+[span] -1.88%
+[span] -3.074
+[span] 159.353
+[span] 160.878
+[div] AUD/USD
+[div] AUD/USD
+[span] 0.7037
+[span] +1.11%
+[span] +0.0078
+[span] 0.7023
+[span] 0.704
+[div] Bitcoin
+[div] BTC/USD
+[span] 64,200.7617
+[span] +0.46%
+[span] +292.5938
+[span] 64,172.5742
+[span] 65,271.168
+[div] Ethereum
+[div] ETH/USD
+[span] 1,901.87
+[span] -0.35%
+[span] -6.649
+[span] 1,899.8345
+[span] 1,933.7778
+[div] Solana
+[div] SOL/USD
+[span] 74.06
+[span] +0.63%
+[span] +0.4628
+[span] 73.6997
+[span] 75.0438
+[h2] Market State
+[div] Updated at 2:58:01 PM
+[div] Risk appetite
+[span] Risk-on
+[div] US equities
+[span] Stronger
+[div] Crypto
+[span] Stronger
+[div] Dollar
+[span] Weaker
+[div] Gold
+[span] Stronger
+[h2] US Macro Indicators
+[div] FRED
+[div] CPI
+[div] 2026-06-01
+[span] 332.568
+[span] -1.41
+[div] Unemployment
+[div] 2026-06-01
+[span] 4.2
+[span] -0.10
+[div] Fed Funds
+[div] 2026-06-01
+[span] 3.63
+[span] +0.00
+[div] US 2Y
+[div] 2026-07-29
+[span] 4.22
+[span] -0.04
+[div] US 10Y
+[div] 2026-07-29
+[span] 4.67
+[span] +0.06
+[div] 2026-06-01
+[span] 23,155.2
+[span] +99.60
+[div] Today's Trading Environment
+[div] Generated at 2:57:12 PM
+[span] Bias
+[span] Bullish
+[span] Volatility
+[span] Event-driven
+[span] Risk
+[span] Risk-on
+[span] Confidence
+[span] High
+[p] Risk assets are broadly firm, giving the session a modest bullish tilt. A high-impact event is on deck; wait for the release before trusting direction.
+[div] Key drivers
+[span] Silver ETF
+[span] Session change +3.34%
+[span] Nasdaq 100
+[span] Session change +3.30%
+[span] USD/JPY
+[span] Session change -1.94%
+[div] Today's catalysts
+[span] 02:30 PM
+[span] BOJ Press Conference
+[span] High
+[span] 05:00 PM
+[span] Core CPI Flash Estimate y/y
+[span] Medium
+[span] 05:00 PM
+[span] CPI Flash Estimate y/y
+[span] Medium
+[div] Focus news
+[span] Bitcoin ETFs post $233M inflows, pushing week back into the green
+[span] cointelegraph
+[span] Iran targets strategic U.S. assets in Kuwait, Bahrain after Egypt drone attack
+[span] cnbc_top
+[span] BOJ holds rates at 1%, warns of core inflation exceeding 2% target
+[span] cnbc_top
+[div] Conditional playbook
+[div] Bullish scenario
+[div] Look for continuation only if major indices hold pre-market strength and participation improves.
+[div] Bearish scenario
+[div] Look for downside continuation only if rebounds fail to reclaim the key range and risk assets weaken together.
+[div] Stand-aside scenario
+[div] Stand aside if price repeatedly crosses the opening range or cross-asset signals remain conflicted after events.
+[span] Sources:
+[a] TradingView
+[a] Yahoo Finance
+[a] FRED
+[a] Forex Factory
+[span] Radar RSS
+[span] Rule-based fallback
+[span] Hot Topics
+[span] Briefing at 04:02 AM
+[span] Telegram’s Pavel Durov responds to Russia’s terrorism designation
+[span] Senator Schumer proposes agency to address corruption, including Trump’s crypto ventures
+[span] Here's where Jeffrey Gundlach is investing after the Fed held rates steady
+[span] Ondo Finance weighs acquisition worth up to $500 million
+[span] Trump says sanctions bill should include tariffs on Iran, despite 'trivial' trade with U.S.
+[h2] Workspace tools
+[button] Open AI Assistant
+[button] Open Market Hours

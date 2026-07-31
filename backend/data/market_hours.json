@@ -1,0 +1,313 @@
+{
+  "version": "2026.07",
+  "markets": [
+    {
+      "id": "nyse",
+      "group": "equities",
+      "name": { "zh": "纽约证券交易所", "en": "New York Stock Exchange" },
+      "city": { "zh": "纽约", "en": "New York" },
+      "country_code": "US",
+      "timezone": "America/New_York",
+      "sessions": [
+        { "kind": "pre", "weekdays": [0, 1, 2, 3, 4], "start": "04:00", "end": "09:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "16:00" },
+        { "kind": "after", "weekdays": [0, 1, 2, 3, 4], "start": "16:00", "end": "20:00" }
+      ]
+    },
+    {
+      "id": "nasdaq",
+      "group": "equities",
+      "name": { "zh": "纳斯达克交易所", "en": "NASDAQ" },
+      "city": { "zh": "纽约", "en": "New York" },
+      "country_code": "US",
+      "timezone": "America/New_York",
+      "sessions": [
+        { "kind": "pre", "weekdays": [0, 1, 2, 3, 4], "start": "04:00", "end": "09:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "16:00" },
+        { "kind": "after", "weekdays": [0, 1, 2, 3, 4], "start": "16:00", "end": "20:00" }
+      ]
+    },
+    {
+      "id": "lse",
+      "group": "equities",
+      "name": { "zh": "伦敦证券交易所", "en": "London Stock Exchange" },
+      "city": { "zh": "伦敦", "en": "London" },
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "08:00", "end": "16:30" }
+      ]
+    },
+    {
+      "id": "euronext",
+      "group": "equities",
+      "name": { "zh": "泛欧交易所", "en": "Euronext" },
+      "city": { "zh": "巴黎 / 阿姆斯特丹", "en": "Paris / Amsterdam" },
+      "country_code": "EU",
+      "timezone": "Europe/Paris",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "17:30" }
+      ]
+    },
+    {
+      "id": "xetra",
+      "group": "equities",
+      "name": { "zh": "法兰克福交易所", "en": "Frankfurt XETRA" },
+      "city": { "zh": "法兰克福", "en": "Frankfurt" },
+      "country_code": "DE",
+      "timezone": "Europe/Berlin",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "17:30" }
+      ]
+    },
+    {
+      "id": "sse",
+      "group": "equities",
+      "name": { "zh": "上海证券交易所", "en": "Shanghai Stock Exchange" },
+      "city": { "zh": "上海", "en": "Shanghai" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:00", "end": "15:00" }
+      ]
+    },
+    {
+      "id": "szse",
+      "group": "equities",
+      "name": { "zh": "深圳证券交易所", "en": "Shenzhen Stock Exchange" },
+      "city": { "zh": "深圳", "en": "Shenzhen" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:00", "end": "15:00" }
+      ]
+    },
+    {
+      "id": "hkex",
+      "group": "equities",
+      "name": { "zh": "香港交易所", "en": "Hong Kong Exchange" },
+      "city": { "zh": "香港", "en": "Hong Kong" },
+      "country_code": "HK",
+      "timezone": "Asia/Hong_Kong",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "12:00" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:00", "end": "16:00" }
+      ]
+    },
+    {
+      "id": "tse",
+      "group": "equities",
+      "name": { "zh": "东京证券交易所", "en": "Tokyo Stock Exchange" },
+      "city": { "zh": "东京", "en": "Tokyo" },
+      "country_code": "JP",
+      "timezone": "Asia/Tokyo",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "12:30", "end": "15:30" }
+      ]
+    },
+    {
+      "id": "krx",
+      "group": "equities",
+      "name": { "zh": "韩国交易所", "en": "Korea Exchange" },
+      "city": { "zh": "首尔", "en": "Seoul" },
+      "country_code": "KR",
+      "timezone": "Asia/Seoul",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "15:30" }
+      ]
+    },
+    {
+      "id": "sgx",
+      "group": "equities",
+      "name": { "zh": "新加坡交易所", "en": "Singapore Exchange" },
+      "city": { "zh": "新加坡", "en": "Singapore" },
+      "country_code": "SG",
+      "timezone": "Asia/Singapore",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "12:00" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "asx",
+      "group": "equities",
+      "name": { "zh": "澳大利亚证券交易所", "en": "Australian Securities Exchange" },
+      "city": { "zh": "悉尼", "en": "Sydney" },
+      "country_code": "AU",
+      "timezone": "Australia/Sydney",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "10:00", "end": "16:00" }
+      ]
+    },
+    {
+      "id": "forex",
+      "group": "spot_forex",
+      "name": { "zh": "全球外汇市场", "en": "Global Forex" },
+      "city": { "zh": "全球", "en": "Global" },
+      "country_code": "FX",
+      "timezone": "America/New_York",
+      "sessions": [
+        { "kind": "main", "weekdays": [6], "start": "17:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3], "start": "00:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [4], "start": "00:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "spot_gold",
+      "group": "spot_forex",
+      "name": { "zh": "现货黄金", "en": "Spot Gold" },
+      "city": { "zh": "全球", "en": "Global" },
+      "country_code": "XAU",
+      "timezone": "America/New_York",
+      "sessions": [
+        { "kind": "main", "weekdays": [6], "start": "18:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3], "start": "00:00", "end": "17:00" },
+        { "kind": "night", "weekdays": [0, 1, 2, 3], "start": "18:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [4], "start": "00:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "spot_silver",
+      "group": "spot_forex",
+      "name": { "zh": "现货白银", "en": "Spot Silver" },
+      "city": { "zh": "全球", "en": "Global" },
+      "country_code": "XAG",
+      "timezone": "America/New_York",
+      "sessions": [
+        { "kind": "main", "weekdays": [6], "start": "18:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3], "start": "00:00", "end": "17:00" },
+        { "kind": "night", "weekdays": [0, 1, 2, 3], "start": "18:00", "end": "24:00" },
+        { "kind": "main", "weekdays": [4], "start": "00:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "comex_gold",
+      "group": "futures",
+      "name": { "zh": "COMEX 黄金", "en": "COMEX Gold" },
+      "city": { "zh": "芝加哥", "en": "Chicago" },
+      "country_code": "US",
+      "timezone": "America/Chicago",
+      "note": { "zh": "电子盘时段；每日维护窗口和节假日安排可能调整。", "en": "Electronic session; daily maintenance and holiday hours may vary." },
+      "sessions": [
+        { "kind": "night", "weekdays": [6, 0, 1, 2, 3], "start": "18:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "nymex_wti",
+      "group": "futures",
+      "name": { "zh": "NYMEX WTI 原油", "en": "NYMEX WTI Crude Oil" },
+      "city": { "zh": "芝加哥", "en": "Chicago" },
+      "country_code": "US",
+      "timezone": "America/Chicago",
+      "note": { "zh": "电子盘时段；每日维护窗口和节假日安排可能调整。", "en": "Electronic session; daily maintenance and holiday hours may vary." },
+      "sessions": [
+        { "kind": "night", "weekdays": [6, 0, 1, 2, 3], "start": "18:00", "end": "17:00" }
+      ]
+    },
+    {
+      "id": "ice_brent",
+      "group": "futures",
+      "name": { "zh": "ICE 布伦特原油", "en": "ICE Brent Crude" },
+      "city": { "zh": "伦敦", "en": "London" },
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "01:00", "end": "23:00" }
+      ]
+    },
+    {
+      "id": "shfe",
+      "group": "futures",
+      "name": { "zh": "上海期货交易所", "en": "Shanghai Futures Exchange" },
+      "city": { "zh": "上海", "en": "Shanghai" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "note": { "zh": "夜盘结束时间因品种而异，此处按通用时段展示。", "en": "Night-session closing times vary by contract; common hours are shown." },
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "10:15" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "10:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:30", "end": "15:00" },
+        { "kind": "night", "weekdays": [0, 1, 2, 3, 4], "start": "21:00", "end": "23:00" }
+      ]
+    },
+    {
+      "id": "dce",
+      "group": "futures",
+      "name": { "zh": "大连商品交易所", "en": "Dalian Commodity Exchange" },
+      "city": { "zh": "大连", "en": "Dalian" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "note": { "zh": "夜盘适用品种存在差异。", "en": "Night-session availability varies by contract." },
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "10:15" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "10:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:30", "end": "15:00" },
+        { "kind": "night", "weekdays": [0, 1, 2, 3, 4], "start": "21:00", "end": "23:00" }
+      ]
+    },
+    {
+      "id": "czce",
+      "group": "futures",
+      "name": { "zh": "郑州商品交易所", "en": "Zhengzhou Commodity Exchange" },
+      "city": { "zh": "郑州", "en": "Zhengzhou" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "note": { "zh": "夜盘适用品种存在差异。", "en": "Night-session availability varies by contract." },
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "10:15" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "10:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:30", "end": "15:00" },
+        { "kind": "night", "weekdays": [0, 1, 2, 3, 4], "start": "21:00", "end": "23:00" }
+      ]
+    },
+    {
+      "id": "cffex",
+      "group": "futures",
+      "name": { "zh": "中国金融期货交易所", "en": "China Financial Futures Exchange" },
+      "city": { "zh": "上海", "en": "Shanghai" },
+      "country_code": "CN",
+      "timezone": "Asia/Shanghai",
+      "sessions": [
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:30", "end": "11:30" },
+        { "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "13:00", "end": "15:00" }
+      ]
+    }
+  ],
+  "forex_sessions": [
+    {
+      "id": "sydney",
+      "name": { "zh": "悉尼", "en": "Sydney" },
+      "city": { "zh": "悉尼", "en": "Sydney" },
+      "country_code": "AU",
+      "timezone": "Australia/Sydney",
+      "sessions": [{ "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "08:00", "end": "17:00" }]
+    },
+    {
+      "id": "tokyo",
+      "name": { "zh": "东京", "en": "Tokyo" },
+      "city": { "zh": "东京", "en": "Tokyo" },
+      "country_code": "JP",
+      "timezone": "Asia/Tokyo",
+      "sessions": [{ "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "09:00", "end": "18:00" }]
+    },
+    {
+      "id": "london",
+      "name": { "zh": "伦敦", "en": "London" },
+      "city": { "zh": "伦敦", "en": "London" },
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "sessions": [{ "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "08:00", "end": "17:00" }]
+    },
+    {
+      "id": "new_york",
+      "name": { "zh": "纽约", "en": "New York" },
+      "city": { "zh": "纽约", "en": "New York" },
+      "country_code": "US",
+      "timezone": "America/New_York",
+      "sessions": [{ "kind": "main", "weekdays": [0, 1, 2, 3, 4], "start": "08:00", "end": "17:00" }]
+    }
+  ]
+}

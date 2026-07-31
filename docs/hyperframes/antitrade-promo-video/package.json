@@ -1,0 +1,20 @@
+{
+  "name": "antitrade-product-videos",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "hyperframes preview",
+    "lint": "hyperframes lint",
+    "inspect": "hyperframes inspect --samples 15",
+    "check": "hyperframes lint && hyperframes validate && hyperframes inspect --samples 15",
+    "render:draft": "hyperframes render --quality draft --output renders/antitrade-promo-draft.mp4",
+    "render": "hyperframes render --quality standard --output renders/antitrade-promo.mp4",
+    "publish": "hyperframes publish"
+  },
+  "devDependencies": {
+    "hyperframes": "0.5.3"
+  }
+}

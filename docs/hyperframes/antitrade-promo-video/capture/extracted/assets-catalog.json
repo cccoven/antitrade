@@ -1,0 +1,10 @@
+[
+  {
+    "url": "http://127.0.0.1:5174/favicon.png",
+    "type": "Icon",
+    "contexts": [
+      "link[rel=\"icon\"]"
+    ],
+    "notes": null
+  }
+]

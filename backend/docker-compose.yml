@@ -1,0 +1,23 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: antitrade
+      POSTGRES_PASSWORD: antitrade
+      POSTGRES_DB: antitrade
+    ports:
+      - "5433:5432"
+    volumes:
+      - antitrade_pgdata:/var/lib/postgresql/data
+
+  rsshub:
+    image: diygod/rsshub
+    ports:
+      - "1200:1200"
+    environment:
+      CACHE_TYPE: memory
+      NODE_ENV: production
+    restart: unless-stopped
+
+volumes:
+  antitrade_pgdata:

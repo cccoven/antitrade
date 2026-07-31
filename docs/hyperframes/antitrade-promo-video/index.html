@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>AntiTrade Product Tour</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #111111;
+      }
+
+      #root,
+      .film,
+      .scene {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      #root {
+        color: #f3f3f3;
+        background: #111111;
+        font-family: "SF Pro Text", "Helvetica Neue", -apple-system,
+          BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        background: #111111;
+      }
+
+      .scene::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.32;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 71px,
+            rgba(255, 255, 255, 0.035) 72px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 71px,
+            rgba(255, 255, 255, 0.035) 72px
+          );
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        color: #d9a778;
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .headline {
+        margin: 0;
+        color: #f3f3f3;
+        font-size: 74px;
+        font-weight: 760;
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+      }
+
+      .support {
+        max-width: 620px;
+        margin: 24px 0 0;
+        color: #b3b3b3;
+        font-size: 28px;
+        font-weight: 430;
+        line-height: 1.42;
+        letter-spacing: -0.015em;
+      }
+
+      .accent-rule {
+        width: 150px;
+        height: 4px;
+        margin-top: 28px;
+        border-radius: 99px;
+        background: #b88352;
+        transform-origin: left center;
+      }
+
+      .product-window {
+        position: absolute;
+        left: 110px;
+        top: 62px;
+        width: 1700px;
+        height: 956px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 18px;
+        background: #181818;
+        box-shadow:
+          0 40px 110px rgba(0, 0, 0, 0.52),
+          0 0 0 1px rgba(184, 131, 82, 0.05);
+      }
+
+      .window-bar {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        background: #181818;
+      }
+
+      .window-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: rgba(243, 243, 243, 0.24);
+      }
+
+      .window-dot.accent {
+        background: #b88352;
+      }
+
+      .screen-viewport {
+        position: relative;
+        width: 100%;
+        height: 918px;
+        overflow: hidden;
+        background: #181818;
+      }
+
+      .screen-viewport img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+      }
+
+      .copy-card {
+        position: absolute;
+        z-index: 8;
+        left: 152px;
+        top: 112px;
+        width: 610px;
+        padding: 34px 38px 38px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 18px;
+        background: rgba(17, 17, 17, 0.94);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      }
+
+      .copy-card.compact {
+        width: 540px;
+      }
+
+      .feature-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .feature-chip {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 15px;
+        border: 1px solid rgba(217, 167, 120, 0.24);
+        border-radius: 99px;
+        color: #d9a778;
+        background: rgba(184, 131, 82, 0.1);
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 17px;
+        font-weight: 650;
+      }
+
+      .metric-card {
+        position: absolute;
+        z-index: 9;
+        min-width: 214px;
+        padding: 20px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 14px;
+        background: rgba(24, 24, 24, 0.96);
+        box-shadow: 0 20px 54px rgba(0, 0, 0, 0.38);
+      }
+
+      .metric-label {
+        color: #9f9f9f;
+        font-size: 17px;
+      }
+
+      .metric-value {
+        margin-top: 8px;
+        color: #f3f3f3;
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 31px;
+        font-weight: 700;
+      }
+
+      .metric-value.positive {
+        color: #54b887;
+      }
+
+      .metric-value.risk {
+        color: #e07867;
+      }
+
+      .transition {
+        position: absolute;
+        inset: 0;
+        z-index: 60;
+        overflow: hidden;
+        background: #b88352;
+      }
+
+      .transition::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      /* Intro */
+      .intro-grid {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-columns: 1.04fr 0.96fr;
+        align-items: center;
+        gap: 70px;
+        padding: 100px 110px;
+      }
+
+      .intro-copy {
+        position: relative;
+        z-index: 5;
+      }
+
+      .brand-kicker {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-bottom: 30px;
+        padding: 0 17px;
+        border: 1px solid rgba(217, 167, 120, 0.3);
+        border-radius: 99px;
+        color: #d9a778;
+        background: rgba(184, 131, 82, 0.1);
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .intro-title {
+        margin: 0;
+        font-size: 112px;
+        font-weight: 780;
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+      }
+
+      .intro-subtitle {
+        max-width: 720px;
+        margin: 32px 0 0;
+        color: #b3b3b3;
+        font-size: 34px;
+        line-height: 1.35;
+      }
+
+      .intro-montage {
+        position: relative;
+        height: 850px;
+      }
+
+      .montage-window {
+        position: absolute;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        background: #181818;
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.48);
+      }
+
+      .montage-window img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+      }
+
+      .montage-main {
+        left: 0;
+        top: 76px;
+        width: 830px;
+        height: 467px;
+      }
+
+      .montage-secondary {
+        right: 8px;
+        bottom: 76px;
+        width: 640px;
+        height: 360px;
+      }
+
+      .montage-accent {
+        position: absolute;
+        left: 58px;
+        bottom: 98px;
+        width: 220px;
+        height: 8px;
+        border-radius: 99px;
+        background: #b88352;
+      }
+
+      /* Scene-specific floating cards */
+      .market-one {
+        right: 142px;
+        top: 154px;
+      }
+
+      .market-two {
+        right: 142px;
+        top: 298px;
+      }
+
+      .assistant-card {
+        left: 132px;
+        top: 132px;
+      }
+
+      .automation-card {
+        right: 142px;
+        top: 142px;
+      }
+
+      .journal-one {
+        right: 146px;
+        top: 144px;
+      }
+
+      .journal-two {
+        right: 146px;
+        top: 285px;
+      }
+
+      .portfolio-one {
+        right: 142px;
+        top: 142px;
+      }
+
+      .portfolio-two {
+        right: 142px;
+        top: 282px;
+      }
+
+      /* Closing */
+      .outro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .outro-lockup {
+        position: relative;
+        z-index: 5;
+        width: 1240px;
+        text-align: center;
+      }
+
+      .outro-kicker {
+        color: #d9a778;
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .outro-title {
+        margin: 26px 0 0;
+        font-size: 132px;
+        font-weight: 780;
+        line-height: 0.92;
+        letter-spacing: -0.065em;
+      }
+
+      .workflow {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+        margin-top: 42px;
+      }
+
+      .workflow-step {
+        min-width: 142px;
+        padding: 14px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        border-radius: 10px;
+        color: #b3b3b3;
+        background: #181818;
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 19px;
+      }
+
+      .outro-rule {
+        width: 260px;
+        height: 5px;
+        margin: 34px auto 0;
+        border-radius: 99px;
+        background: #b88352;
+        transform-origin: center center;
+      }
+
+      .outro-subtitle {
+        margin-top: 32px;
+        color: #f3f3f3;
+        font-size: 36px;
+        font-weight: 560;
+      }
+
+      .disclaimer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 46px;
+        color: #777777;
+        font-family: "SF Mono", "Roboto Mono", monospace;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .final-fade {
+        position: absolute;
+        inset: 0;
+        z-index: 50;
+        pointer-events: none;
+        background: #111111;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="antitrade-product-tour"
+      data-start="0"
+      data-duration="27.4"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="film">
+        <section
+          id="intro"
+          class="clip scene intro"
+          data-start="0"
+          data-duration="4.1"
+          data-track-index="1"
+          aria-label="AntiTrade connected workspace"
+        >
+          <div class="intro-grid">
+            <div class="intro-copy">
+              <div class="brand-kicker">Independent trader workspace</div>
+              <h1 class="intro-title">AntiTrade</h1>
+              <p class="intro-subtitle">
+                Research, validate, record, and improve — in one connected trading bench.
+              </p>
+              <div class="accent-rule"></div>
+            </div>
+            <div class="intro-montage">
+              <div class="montage-window montage-main">
+                <img
+                  src="capture/screenshots/backtest-config-dark.png"
+                  alt="AntiTrade backtest configuration in dark mode"
+                />
+              </div>
+              <div class="montage-window montage-secondary">
+                <img
+                  src="capture/screenshots/automations-dark.png"
+                  alt="AntiTrade automations in dark mode"
+                />
+              </div>
+              <div class="montage-accent"></div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="market"
+          class="clip scene"
+          data-start="3.7"
+          data-duration="3.9"
+          data-track-index="2"
+          aria-label="Cross-asset market overview"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/market-overview-dark.png"
+                alt="Cross-asset market overview"
+              />
+            </div>
+          </div>
+          <div class="copy-card compact">
+            <div class="eyebrow">Market Overview</div>
+            <h2 class="headline">See the whole field.</h2>
+            <p class="support">Cross-asset quotes, macro context, and market regimes in one view.</p>
+            <div class="feature-chips">
+              <span class="feature-chip">Cross-asset</span>
+              <span class="feature-chip">Macro</span>
+              <span class="feature-chip">Timestamped</span>
+            </div>
+          </div>
+          <div class="metric-card market-one">
+            <div class="metric-label">Market context</div>
+            <div class="metric-value">One desk</div>
+          </div>
+          <div class="metric-card market-two">
+            <div class="metric-label">Workflow</div>
+            <div class="metric-value positive">Connected</div>
+          </div>
+        </section>
+
+        <section
+          id="assistant"
+          class="clip scene"
+          data-start="7.25"
+          data-duration="2.5"
+          data-track-index="3"
+          aria-label="AI assisted trading review"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/assistant-dark.png"
+                alt="AI assistant with journal context"
+              />
+            </div>
+          </div>
+          <div class="copy-card assistant-card">
+            <div class="eyebrow">AI Assistant</div>
+            <h2 class="headline">Ask with context.</h2>
+            <p class="support">Research the market and review your own trading record from the same workspace.</p>
+          </div>
+        </section>
+
+        <section
+          id="automation"
+          class="clip scene"
+          data-start="9.4"
+          data-duration="2.75"
+          data-track-index="4"
+          aria-label="Scheduled reports and risk findings"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/findings-dark.png"
+                alt="Automation risk findings"
+              />
+            </div>
+          </div>
+          <div class="copy-card compact">
+            <div class="eyebrow">Automations</div>
+            <h2 class="headline">Keep watch.</h2>
+            <p class="support">Scheduled reports and risk alerts continue after the manual research ends.</p>
+          </div>
+          <div class="metric-card automation-card">
+            <div class="metric-label">Active findings</div>
+            <div class="metric-value risk">6</div>
+          </div>
+        </section>
+
+        <section
+          id="journal"
+          class="clip scene"
+          data-start="11.8"
+          data-duration="2.15"
+          data-track-index="5"
+          aria-label="Trading journal analytics"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/journal-analytics-dark.png"
+                alt="Trading journal analytics"
+              />
+            </div>
+          </div>
+          <div class="copy-card compact">
+            <div class="eyebrow">Journal & Review</div>
+            <h2 class="headline">Learn from the record.</h2>
+            <p class="support">Turn every trade into measurable feedback.</p>
+          </div>
+          <div class="metric-card journal-one">
+            <div class="metric-label">Total P/L</div>
+            <div class="metric-value positive">+$2,674.83</div>
+          </div>
+          <div class="metric-card journal-two">
+            <div class="metric-label">Win rate</div>
+            <div class="metric-value">60.0%</div>
+          </div>
+        </section>
+
+        <section
+          id="strategies"
+          class="clip scene"
+          data-start="13.6"
+          data-duration="3.55"
+          data-track-index="6"
+          aria-label="Reusable strategy library"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/strategies-dark.png"
+                alt="Strategy library"
+              />
+            </div>
+          </div>
+          <div class="copy-card">
+            <div class="eyebrow">Strategy Validation</div>
+            <h2 class="headline">Make ideas reusable.</h2>
+            <p class="support">Organize playbooks, connect outcomes, and validate before risking capital.</p>
+            <div class="feature-chips">
+              <span class="feature-chip">Playbooks</span>
+              <span class="feature-chip">Backtests</span>
+              <span class="feature-chip">Walk-forward</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="portfolio"
+          class="clip scene"
+          data-start="16.8"
+          data-duration="3"
+          data-track-index="7"
+          aria-label="Portfolio context"
+        >
+          <div class="product-window">
+            <div class="window-bar">
+              <span class="window-dot accent"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <div class="screen-viewport">
+              <img
+                class="screen-image"
+                data-layout-allow-overflow
+                src="capture/screenshots/portfolio-dark.png"
+                alt="Portfolio allocation and net worth"
+              />
+            </div>
+          </div>
+          <div class="copy-card compact">
+            <div class="eyebrow">Portfolio</div>
+            <h2 class="headline">Keep the full context.</h2>
+            <p class="support">Assets, liabilities, allocation, and net worth — together.</p>
+          </div>
+          <div class="metric-card portfolio-one">
+            <div class="metric-label">Total assets</div>
+            <div class="metric-value">$5.86M</div>
+          </div>
+          <div class="metric-card portfolio-two">
+            <div class="metric-label">Liabilities</div>
+            <div class="metric-value risk">$267K</div>
+          </div>
+        </section>
+
+        <section
+          id="outro"
+          class="clip scene outro"
+          data-start="19.45"
+          data-duration="7.95"
+          data-track-index="8"
+          aria-label="AntiTrade workflow closing"
+        >
+          <div class="outro-lockup">
+            <div class="outro-kicker">A self-hosted workspace for independent traders</div>
+            <h2 class="outro-title">AntiTrade</h2>
+            <div class="workflow">
+              <div class="workflow-step">Observe</div>
+              <div class="workflow-step">Plan</div>
+              <div class="workflow-step">Test</div>
+              <div class="workflow-step">Record</div>
+              <div class="workflow-step">Improve</div>
+            </div>
+            <div class="outro-rule"></div>
+            <div class="outro-subtitle">Your process. One trading bench.</div>
+          </div>
+          <div class="disclaimer">Research and review only. Not investment advice or an execution service.</div>
+          <div class="final-fade"></div>
+        </section>
+
+        <div id="transition-market" class="clip transition t1" data-start="3.55" data-duration="0.6" data-track-index="31" data-layout-allow-overflow></div>
+        <div id="transition-assistant" class="clip transition t2" data-start="7.1" data-duration="0.6" data-track-index="32" data-layout-allow-overflow></div>
+        <div id="transition-automation" class="clip transition t3" data-start="9.25" data-duration="0.6" data-track-index="33" data-layout-allow-overflow></div>
+        <div id="transition-journal" class="clip transition t4" data-start="11.65" data-duration="0.6" data-track-index="34" data-layout-allow-overflow></div>
+        <div id="transition-strategies" class="clip transition t5" data-start="13.45" data-duration="0.6" data-track-index="35" data-layout-allow-overflow></div>
+        <div id="transition-portfolio" class="clip transition t6" data-start="16.65" data-duration="0.6" data-track-index="36" data-layout-allow-overflow></div>
+        <div id="transition-outro" class="clip transition t7" data-start="19.3" data-duration="0.6" data-track-index="37" data-layout-allow-overflow></div>
+
+        <audio
+          id="narration"
+          src="narration.wav"
+          data-start="0"
+          data-duration="26.347"
+          data-track-index="0"
+          data-volume="1"
+        ></audio>
+      </div>
+
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({
+          paused: true,
+          defaults: { duration: 0.56, ease: "power3.out" },
+        });
+
+        tl.set(".transition", { yPercent: 105 }, 0);
+        tl.set(".final-fade", { opacity: 0 }, 0);
+
+        tl.fromTo(
+          ".intro .brand-kicker",
+          { y: 24, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.48, ease: "power3.out" },
+          0.14,
+        );
+        tl.fromTo(
+          ".intro-title",
+          { y: 62, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.72, ease: "expo.out" },
+          0.34,
+        );
+        tl.fromTo(
+          ".intro-subtitle",
+          { y: 34, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.56, ease: "power3.out" },
+          0.72,
+        );
+        tl.fromTo(
+          ".intro .accent-rule",
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 0.64, ease: "expo.out" },
+          0.98,
+        );
+        tl.fromTo(
+          ".montage-main",
+          { x: 70, y: -28, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 0.7, ease: "power4.out" },
+          0.4,
+        );
+        tl.fromTo(
+          ".montage-secondary",
+          { x: -46, y: 54, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 0.68, ease: "power4.out" },
+          0.78,
+        );
+        tl.fromTo(
+          ".montage-accent",
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 0.58, transformOrigin: "left center", ease: "expo.out" },
+          1.1,
+        );
+
+        function addWipe(selector, at) {
+          tl.fromTo(
+            selector,
+            { yPercent: 105 },
+            { yPercent: 0, duration: 0.28, ease: "power3.inOut" },
+            at,
+          );
+          tl.to(selector, { yPercent: -105, duration: 0.32, ease: "power3.inOut" }, at + 0.28);
+        }
+
+        function addProductScene(id, at, hold) {
+          const scene = "#" + id;
+          tl.fromTo(
+            scene + " .product-window",
+            { y: 44, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.62, ease: "power4.out" },
+            at,
+          );
+          tl.fromTo(
+            scene + " .screen-image",
+            { scale: 1 },
+            { scale: 1.025, duration: hold, ease: "sine.inOut" },
+            at + 0.24,
+          );
+          tl.fromTo(
+            scene + " .copy-card",
+            { x: -38, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.52, ease: "power3.out" },
+            at + 0.28,
+          );
+          tl.fromTo(
+            scene + " .copy-card .eyebrow",
+            { y: 16, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.36, ease: "power2.out" },
+            at + 0.48,
+          );
+          tl.fromTo(
+            scene + " .copy-card .headline",
+            { y: 34, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "expo.out" },
+            at + 0.56,
+          );
+          tl.fromTo(
+            scene + " .copy-card .support",
+            { y: 22, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.42, ease: "power2.out" },
+            at + 0.72,
+          );
+          if (document.querySelector(scene + " .feature-chip")) {
+            tl.fromTo(
+              scene + " .feature-chip",
+              { y: 14, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.34, stagger: 0.07, ease: "power2.out" },
+              at + 0.88,
+            );
+          }
+          if (document.querySelector(scene + " .metric-card")) {
+            tl.fromTo(
+              scene + " .metric-card",
+              { x: 32, opacity: 0 },
+              { x: 0, opacity: 1, duration: 0.4, stagger: 0.09, ease: "power3.out" },
+              at + 0.72,
+            );
+          }
+        }
+
+        addWipe(".t1", 3.55);
+        addProductScene("market", 3.72, 3.45);
+
+        addWipe(".t2", 7.1);
+        addProductScene("assistant", 7.27, 2.1);
+
+        addWipe(".t3", 9.25);
+        addProductScene("automation", 9.42, 2.35);
+
+        addWipe(".t4", 11.65);
+        addProductScene("journal", 11.82, 1.7);
+
+        addWipe(".t5", 13.45);
+        addProductScene("strategies", 13.62, 3.1);
+
+        addWipe(".t6", 16.65);
+        addProductScene("portfolio", 16.82, 2.55);
+
+        addWipe(".t7", 19.3);
+        tl.fromTo(
+          ".outro-kicker",
+          { y: 22, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.46, ease: "power3.out" },
+          19.56,
+        );
+        tl.fromTo(
+          ".outro-title",
+          { y: 62, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.78, ease: "expo.out" },
+          19.76,
+        );
+        tl.fromTo(
+          ".workflow-step",
+          { y: 28, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.42, stagger: 0.1, ease: "power3.out" },
+          20.42,
+        );
+        tl.fromTo(
+          ".outro-rule",
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 0.66, ease: "expo.out" },
+          21.34,
+        );
+        tl.fromTo(
+          ".outro-subtitle",
+          { y: 28, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.54, ease: "power3.out" },
+          23.8,
+        );
+        tl.fromTo(
+          ".disclaimer",
+          { y: 16, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.42, ease: "power2.out" },
+          24.7,
+        );
+        tl.to(".final-fade", { opacity: 1, duration: 0.7, ease: "power2.in" }, 26.7);
+
+        window.__timelines["antitrade-product-tour"] = tl;
+      </script>
+    </div>
+  </body>
+</html>
