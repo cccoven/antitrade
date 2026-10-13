@@ -9,8 +9,8 @@ backtesting==0.6.6
 yfinance==1.4.1
 tvdatafeed @ git+https://github.com/rongardF/tvdatafeed.git
 openpyxl==3.1.5
-python-multipart==0.0.9
-python-jose[cryptography]==3.3.0
+python-multipart==0.0.31
+python-jose[cryptography]==3.5.0
 google-auth==2.56.2
 passlib[bcrypt]==1.7.4
 bcrypt==4.0.1
